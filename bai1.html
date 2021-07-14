@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<input type="number" id="input" placeholder="Nhập nhiệt độ (°C) ">
+<button onclick="chuyenDoi()">Chuyển đổi</button>
+<p id="output"></p>
+<script>
+function chuyenDoi(){
+    let doc = document.getElementById('input').value;
+    let text;
+    let dof;
+    dof= (doc*9/5) +32;
+    text = "Độ F = " + dof;
+    document.getElementById('output').innerHTML = text;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh tam giác</title>
+</head>
+<body>
+<h2>Kiểm tra cạnh tam giác</h2>
+<input type="number" placeholder="Nhập cạnh a" id="input1">
+<input type="number" placeholder="Nhập cạnh b" id="input2">
+<input type="number" placeholder="Nhập cạnh c" id="input3">
+<button onclick="kiemTra()">Kiểm tra</button>
+<p id="output"></p>
+<script>
+  function kiemTra(){
+    let a = parseInt(document.getElementById('input1').value);
+    let b = parseInt(document.getElementById('input2').value);
+    let c = parseInt(document.getElementById('input3').value);
+    let text;
+    let x = a+b;
+    let y = a+c;
+    let z = b+c;
+    if (a>0 && b>0 && c>0 && x>c && y>b && z>a){
+      text = "Các cạnh thỏa mãn là cạnh hình tam giác";
+    }
+    else {
+      text = "Các  cạnh không thỏa mãn là cạnh hình tam giác";
+    }
+    document.getElementById('output').innerHTML = text;
+  }
+</script>
+</body>
+</html>

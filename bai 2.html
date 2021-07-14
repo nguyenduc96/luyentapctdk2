@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi met sang feet</title>
+</head>
+<body>
+<input type="number" id="input" placeholder="Nhập độ dài (m)">
+<button onclick="chuyenDoi()" >Chuyển đổi</button>
+<p id="output"></p>
+<script>
+  function chuyenDoi(){
+    let m = document.getElementById('input').value;
+    let text;
+    let ft;
+    ft = m*3.2808;
+    text = "Độ dài feet = " + ft;
+    document.getElementById('output').innerHTML= text;
+  }
+</script>
+</body>
+</html>

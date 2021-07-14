@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền lãi ngân hàng</title>
+</head>
+<body>
+<h2>Tính tiền lãi ngân hàng</h2>
+<input type="number" placeholder="Nhập số tiền vay" id="input1">
+<input type="number" placeholder="Nhập số tháng vay" id="input2">
+<button onclick="tinhLai()">Tính</button>
+<p id="output" style="color:red; font-size: 25px"></p>
+<script>
+  function tinhLai(){
+    let tien = parseInt(document.getElementById('input1').value);
+    let goc = parseInt(document.getElementById('input1').value);
+    let thang = parseInt(document.getElementById('input2').value);
+    let text;
+    if (tien <= 0 && thang <= 0){
+      text = "Bạn nhập sai thông số";
+    }
+    else if (tien<=0 && thang >=0){
+      text="Bạn nhập sai số tiền";
+    }
+    else if (tien>=0 && thang<=0){
+      text="Bạn nhập sai số tháng"
+    }
+    else {
+        let i = 1;
+        while(i<=thang){
+            tien+=tien*(2/100);
+            i++;
+        }
+        text = "Tiền lãi kép = "+ (tien - goc) ;
+    }
+    document.getElementById('output').innerHTML= text;
+  }
+
+</script>
+</body>
+</html>

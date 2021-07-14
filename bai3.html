@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập cạnh hình vuông" id="input">
+<button onclick="tinhDt()">Tính diện tích</button>
+<p id="output"></p>
+<script>
+    function tinhDt(){
+        let a = document.getElementById('input').value;
+        let text;
+        let s = a*a;
+        if (a>0){
+            text = "Diện tích hình vuông = " + s;
+        }
+        else {
+            text = "Bạn nhập sai cạnh hình vuông";
+        }
+        document.getElementById('output').innerHTML = text;
+    }
+
+</script>
+</body>
+</html>

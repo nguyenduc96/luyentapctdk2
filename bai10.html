@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<h1>Tính giá điện</h1>
+<input type="number" placeholder="Nhập số điện" id="input">
+<button onclick="giaDien()">Tính</button>
+<p id="output"></p>
+<script>
+    function giaDien(){
+        let sd= document.getElementById('input').value;
+        let text;
+        if (sd<0){
+            text = "Bạn nhập sai số điện";
+        }
+        else if (sd<=50){
+            text = "Tiền điện của bạn = " + sd*1700 + "VNĐ";
+        }
+        else if (sd<=100){
+            text = "Tiền điện của bạn = " + sd*1800 + "VNĐ";
+        }
+        else if (sd<=200){
+            text = "Tiền điện của bạn = " + sd*2000 + "VNĐ";
+        }
+        else if (sd<=300){
+            text = "Tiền điện của bạn = " + sd*2500 + "VNĐ";
+        }
+        else if (sd<=400){
+            text = "Tiền điện của bạn = " + sd*2800 + "VNĐ";
+        }
+        else {
+            text = "Tiền điện của bạn = " + sd*2950 + "VNĐ";
+        }
+        document.getElementById('output').innerHTML=text;
+    }
+</script>
+</body>
+</html>
